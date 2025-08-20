@@ -54,8 +54,50 @@ First, an MLP neural network is trained to act as an identifier for the plant. T
 ### 2.2 Controller Implementation
 The neural controller is implemented using the control structure shown below. It is an MLP network with two hidden layers, 5 neurons in the hidden layer, and one output neuron.
 
-![Figure 1: Control Structure Schematic](./figures/f1.png)
-
+                                                                     +--------------------------+
+                                                           ec(k) --->| Specialized Training Alg |
+                                                                     +--------------------------+
+                                                                                |
+                                                                                | BP (Backpropagation)
+                                                                                |
+                                                                                v
++---------------------+       ΔWc (Weight Update) <----------------------------'
+|  Neural Controller  |
++---------------------+
+          |
+          |
+          '--------> uc(k) ------+------> [ System Under Control ] ----> yp(k) -----+
+                                 |                                                 |
+                                 |                                                 |
+                                 +------> [   Neural Identifier   ] ----> ym(k) --+ |
+                                 |              |           ^                      | |
+                                 |              '----ΔWm----'                      | |
+                                 |                                                 | |
+                                 |                                                 v v
+yd(k) ---> (+) Summing <---------'                                             (-) Summing ----> ec(k)
+             (-)      \                                                          (+)
+              ^        \                                                           ^
+              |         \ Jacobian Copy (Jm)                                       |
+              |          \                                                         |
+              '-----------'--------------------------------------------------------'
+                                 |
+                                 |
+                                 '-------------------------------------------------'
+                                                                                   |
+                                                                                   v (+)
+                                                                                 Summing ----> em(k)
+                                                                                 (-) ^
+                                                                                   | |
+                                                                                   '-'
+                                                                                     |
+                                                                                     v
+                                                                           +--------------------------+
+                                                                           | Generalized Training Alg |
+                                                                           +--------------------------+
+                                                                                       ^
+                                                                                       | BP
+                                                                                       |
+                                                                                       '----
 ## 3. Implementation Files
 
 The MATLAB code for this project can be found in the repository:
