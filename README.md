@@ -11,6 +11,9 @@ $$
 $$
 
 $$
+\dot{x}_3 = \frac{1}{T_r}[-x_3 + \frac{K_r}{K_q} u]
+$$
+$$
 \dot{x}_2 = \frac{beta_e}{V_0}[-q_m x_1 - C_{im} x_2 + C_d W x_3 \sqrt{\frac{1}{r}(P_s - x_2)}]
 $$
 
