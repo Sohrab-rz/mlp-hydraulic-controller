@@ -75,19 +75,19 @@ To normalize the data, the maximum and minimum values of the system's response w
 
 The upper bound of the system output was found to be approximately 450, and the lower bound was -22.
 
-![Figure 3: System Response to a Constant Input of 3 (Upper Bound)](./figures/f3.png)
+![Figure 3: System Response to a Constant Input of 3 (Upper Bound)](./figures/Picture3.png)
 
-![Figure 4: System Response to a Constant Input of 0 (Lower Bound)](./figures/f4.png)
+![Figure 4: System Response to a Constant Input of 0 (Lower Bound)](./figures/Picture4.png)
 
 For effective system identification, the input signal was a sum of 21 sinusoidal functions with frequencies ranging from 0.01 Hz to 1000 Hz.
 
-![Figure 5: Input Signal for System Identification](./figures/f5.png)
+![Figure 5: Input Signal for System Identification](./figures/Picture5.png)
 
-![Figure 6: Input Signal for System Identification](./figures/f6.png)
+![Figure 6: Input Signal for System Identification](./figures/Picture6.png)
 
 The results of the identification phase are shown below, comparing the system output with the identifier's output.
 
-![Figure 7: Identification Results](./figures/f7.png)
+![Figure 7: Identification Results](./figures/Picture7.png)
 
 The final weights for the identifier network are:
 
@@ -124,17 +124,17 @@ The controller's performance was evaluated for both regulation and tracking task
 #### Regulation Task
 The system's ability to maintain a constant output (setpoint) was tested.
 
-![Figure 8: Regulation Output](./figures/f8.png)
+![Figure 8: Regulation Output](./figures/Picture8.png)
 
-![Figure 9: System Output (Regulation)](./figures/f9.png)
+![Figure 9: System Output (Regulation)](./figures/Picture9.png)
 
-![Figure 10: Identifier Output (Regulation)](./figures/f10.png)
+![Figure 10: Identifier Output (Regulation)](./figures/Picture10.png)
 
-![Figure 11: Identifier and System Error (Regulation)](./figures/f11.png)
+![Figure 11: Identifier and System Error (Regulation)](./figures/Picture11.png)
 
 #### Tracking Task
 The system's ability to follow a sinusoidal reference signal was tested.
 
-![Figure 12: System Output (Tracking)](./figures/f12.png)
+![Figure 12: System Output (Tracking)](./figures/Picture12.png)
 
-![Figure 13: System Output (Tracking)](./figures/f13.png)
+![Figure 13: System Output (Tracking)](./figures/Picture13.png)
