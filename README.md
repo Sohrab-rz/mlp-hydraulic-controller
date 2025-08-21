@@ -11,7 +11,7 @@ $$
 $$
 
 $$
-\dot{x}_2 = \frac{2\beta_e}{V_0} \left[ -q_m x_1 - C_{im} x_2 + C_d W x_3 \sqrt{\tfrac{1}{\rho}(P_s - x_2)} \right]
+\dot{x}_2 = \frac{2\beta_e}{V_0}\left[-q_m x_1 - C_{im} x_2 + C_d W x_3 \sqrt{\tfrac{1}{\rho}(P_s - x_2)}\right]
 $$
 
 $$
