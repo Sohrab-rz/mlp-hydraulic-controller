@@ -57,55 +57,7 @@ The neural controller is implemented using the control structure shown below. It
 
 ## Control System Diagram
 
-```txt
-                                                                     +--------------------------+
-                                                           ec(k) --->| Specialized Training Alg |
-                                                                     +--------------------------+
-                                                                                |
-                                                                                | BP (Backpropagation)
-                                                                                |
-                                                                                v
-+---------------------+       ΔWc (Weight Update) <----------------------------'
-|  Neural Controller  |
-+---------------------+
-          |
-          |
-          '--------> uc(k) ------+------> [ System Under Control ] ----> yp(k) -----+
-                                 |                                                 |
-                                 |                                                 |
-                                 +------> [   Neural Identifier   ] ----> ym(k) --+ |
-                                 |              |           ^                      | |
-                                 |              '----ΔWm----'                      | |
-                                 |                                                 | |
-                                 |                                                 v v
-yd(k) ---> (+) Summing <---------'                                             (-) Summing ----> ec(k)
-             (-)      \                                                          (+)
-              ^        \                                                           ^
-              |         \ Jacobian Copy (Jm)                                       |
-              |          \                                                         |
-              '-----------'--------------------------------------------------------'
-                                 |
-                                 |
-                                 '-------------------------------------------------'
-                                                                                   |
-                                                                                   v (+)
-                                                                                 Summing ----> em(k)
-                                                                                 (-) ^
-                                                                                   | |
-                                                                                   '-'
-                                                                                     |
-                                                                                     v
-                                                                           +--------------------------+
-                                                                           | Generalized Training Alg |
-                                                                           +--------------------------+
-                                                                                       ^
-                                                                                       | BP
-                                                                                       |
-                                                                                       '----
-## Control System Diagram
-
-```
-
+![Figure 1: System Model in Simulink](./figures/bd.png)
 
 ## 3. Implementation Files
 
