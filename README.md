@@ -54,6 +54,10 @@ First, an MLP neural network is trained to act as an identifier for the plant. T
 ### 2.2 Controller Implementation
 The neural controller is implemented using the control structure shown below. It is an MLP network with two hidden layers, 5 neurons in the hidden layer, and one output neuron.
 
+
+## Control System Diagram
+
+```txt
                                                                      +--------------------------+
                                                            ec(k) --->| Specialized Training Alg |
                                                                      +--------------------------+
@@ -98,6 +102,11 @@ yd(k) ---> (+) Summing <---------'                                             (
                                                                                        | BP
                                                                                        |
                                                                                        '----
+## Control System Diagram
+
+```
+
+
 ## 3. Implementation Files
 
 The MATLAB code for this project can be found in the repository:
