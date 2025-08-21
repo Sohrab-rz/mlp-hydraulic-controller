@@ -71,7 +71,7 @@ The MATLAB code for this project can be found in the repository:
 ### 4.1 Identifier Training Results
 To normalize the data, the maximum and minimum values of the system's response were determined using a Simulink model. The input range was considered to be between 0 and 3.
 
-![Figure 2: System Model in Simulink](./figures/f2.png)
+![Figure 2: System Model in Simulink](./figures/picture2.png)
 
 The upper bound of the system output was found to be approximately 450, and the lower bound was -22.
 
